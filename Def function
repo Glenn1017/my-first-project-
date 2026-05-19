@@ -1,0 +1,33 @@
+#计算税费
+price = float(input('enter your expense'))
+def calculate_tax(price):
+    return price * 0.1
+
+print(f"Your tax is{calculate_tax(price)}")
+total = price + calculate_tax(price)
+print(f"Your total is {total}")
+
+
+#打招呼1
+def greet(name):
+    print(f"Hellp,{name}! Welcome back.")
+
+greet("Glenn")
+#打招呼2
+name = input("what's your name?")
+def greet(name):
+   return f"Hello,{name}! Welcome back."
+
+print(greet(name))
+
+#奇数偶数
+number = int(input("enter a number"))
+def evon(number):
+    if number % 2 == 0:
+        print("This is even number. ")
+    else:
+        print("This is odd number. ")
+
+evon(number)
+
+
