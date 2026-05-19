@@ -1,0 +1,33 @@
+#随机猜数字游戏
+import random
+n = random.randint(1,10)
+while True:
+
+    num = int(input("please guess a number"))
+
+    if num > n :
+        print("Too high!")
+    elif num <n :
+        print("Too low!")
+    else:
+        print("Correct!")
+        break
+#石头剪刀布
+import random
+win = {
+    "rock":"scissor",
+    "paper":"rock",
+    "scissor":"paper"
+}
+while True:
+    re = random.choice(["rock","paper","scissor"])
+    y = input("r p s which you want to choice?")
+    print(f"You:{y} | Computer{re}")
+    if y == re:
+        print("Tie")
+    elif win[y] == re:
+        print("you win")
+        break
+    else:
+        print("you lose")
+        break
