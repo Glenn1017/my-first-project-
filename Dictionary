@@ -1,0 +1,33 @@
+# 学生信息字典
+student ={
+    "name": "Glenn",
+    "age": 22,
+    "major": " Computer Science"
+}
+for key, value in student.items():
+    print(f"{str(key).title()}: {str(value).title()}")
+
+#改进(dictionary 用的不是append，直接就是替代）
+student ={
+    "name": "Glenn",
+    "age":22,
+    "major": " Computer Science"
+}
+infom = input("Enter you new major.")
+student["major"] = infom
+
+for key, value in student.items():
+    print(f"{str(key).title()}: {str(value).title()}")
+
+#菜单价格查询
+menu = {
+    "coffee": 5,
+    "burger": 12,
+    "tea": 4,
+    "cake": 6
+}
+name = input("which good do you want?")
+if name in menu:
+    print(f"{name} cost ${menu[name]}")
+else:
+    print("Sorry, we don't have this item")
