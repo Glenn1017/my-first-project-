@@ -1,0 +1,17 @@
+#名字格式化
+name = input("what's your name")
+print(name.upper())
+print(name.lower())
+print(name.title())
+
+#密码长度检查
+password = input('create your password')
+l = len(password)
+if l < 8:
+    print('Password too short')
+elif l >= 8 and '123' in password:
+    print('Password is too simple')
+else:
+    print('Password is accepted.')
+
+    
