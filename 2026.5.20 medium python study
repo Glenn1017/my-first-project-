@@ -1,0 +1,28 @@
+
+a1 = {
+  "name": "Patrick Mahomes,"
+  "locate": " Quarterback",
+  "jersey": "22",
+  'yards_gained': 500
+}
+a2 ={
+  "name": "Tyreek Hill",
+  "locate": "Wide Receiver",
+  "jersey": "28",
+  'yards_gained': 300
+}
+
+a3 ={
+  "name": "Travis Kelce",
+  "locate": "Tight End",
+  "jersey": "29",
+  'yards_gained': 150
+  
+}
+player =[a1,a2,a3]
+co = len(player)
+print(a1)
+print(a2)
+ty = a1['yards_gained'] + a2['yards_gained'] + a3['yards_gained']
+av = ty / co
+print(av)
