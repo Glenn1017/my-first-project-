@@ -48,6 +48,32 @@ file = open("song.txt","r")
 content = file.readlines()
 for line in content:
   print(line)
+
+
+#ai改进版本
+liked_songs = {
+  'title': 'artist'
+}
+def write_liked_songs_to_file(liked_songs,file_name):
+  print("Liked Songs")
+  content = ["Bad Habits by Ed Sheeran\n",
+  "I'm Just Ken by Ryan Gosling\n",
+  "Mastermind by Taylor Swift\n",
+  "Uptown Funk by Mark Ronson ft.Bruno Mars\n",
+  "Ghost by Justin Bieber"
+  ]
+  file = open("file_name","w")
+  file.writelines(content)
+  file.close()
   
+write_liked_songs_to_file(liked_songs, "song.txt")
+
+file = open("file_name","r")
+content = file.readlines()
+for line in content:
+  print(line)
+  
+
+
 
 
