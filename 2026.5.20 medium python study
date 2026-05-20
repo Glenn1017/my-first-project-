@@ -1,4 +1,4 @@
-
+#运动员
 a1 = {
   "name": "Patrick Mahomes,"
   "locate": " Quarterback",
@@ -26,3 +26,28 @@ print(a2)
 ty = a1['yards_gained'] + a2['yards_gained'] + a3['yards_gained']
 av = ty / co
 print(av)
+
+#写入文件和读取文件
+liked_songs = {
+  'title': 'artist'
+}
+def write_liked_songs_to_file(liked_songs,file_name):
+  print("Liked Songs")
+  
+write_liked_songs_to_file(liked_songs, "song.txt")
+content = ["Bad Habits by Ed Sheeran\n",
+  "I'm Just Ken by Ryan Gosling\n",
+  "Mastermind by Taylor Swift\n",
+  "Uptown Funk by Mark Ronson ft.Bruno Mars\n",
+  "Ghost by Justin Bieber"
+  ]
+file = open("song.txt", "w")
+file.writelines(content)
+file.close()
+file = open("song.txt","r")
+content = file.readlines()
+for line in content:
+  print(line)
+  
+
+
