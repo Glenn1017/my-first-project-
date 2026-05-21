@@ -1,0 +1,38 @@
+#找畅销书
+import csv
+with open("D:/Bestseller - Sheet1.csv", "r", encoding="utf8") as file:
+  csv_reader = csv.reader(file)
+  file.readline()
+  max_sales = 0 
+  best_sales = None 
+  for row in csv_reader:
+    current_sales = float(row[4])
+
+    if current_sales > max_sales:
+      max_sales = current_sales
+      best_sales = row
+
+print(best_sales)
+
+with open("bestseller_info.csv","w",newline="",encoding='utf8') as file:
+  csv.writer = csv.writer(file)
+  csv.writer.writerow(best_sales)
+  file.close()
+
+#从其他的csv里面读取
+  import csv
+data = [
+  ['Item', 'Quantity'],
+  ['Blender', 2],
+  ['Posters', 30],
+  ['Shoes', 2]
+]
+try:
+    with open('packing_list.csv','r',encoding='utf8') as file:
+        csv_reader = csv.reader(file)
+        for row in csv_reader
+except  FileNotFoundError:
+        print("Packing list file not found. Creating a new one.")
+        with open('packing_list.csv','w',encoding="utf8",newline="") as file:
+            csv.writer = csv.writer(file)
+            csv.writer.writerows(data)
