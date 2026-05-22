@@ -1,0 +1,32 @@
+#练习1
+def converter(currency):
+    rates = {
+  "usd": 0.14,
+  "eur": 0.13,
+  "jpy": 21.5
+}
+    def convert_amount(amount):
+        return amount * rates[currency]
+    
+    return convert_amount
+
+to_usd = converter("usd")
+print(to_usd(100))
+
+#练习2
+  def discount_calculator(member_type):
+   discount = {
+      "regular": 0.95,
+      "silver": 0.90,
+      "gold": 0.80
+
+   }
+   def apply_discount(price):
+      return price * discount[member_type]
+   
+   return apply_discount
+
+gold_discount = discount_calculator("gold")
+print(gold_discount(100))
+
+  
