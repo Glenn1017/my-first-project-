@@ -1,0 +1,38 @@
+import random
+from functools import reduce
+
+prefixes = ['Mystic', 'Golden', 'Dark', 'Shadow', 'Silver']
+suffixes = ['storm', 'song', 'fire', 'blade', 'whisper']
+
+def create_fantasy_name(list_1, list_2):
+  return random.choice(list_1) + ' ' + random.choice(list_2)
+
+suffixes = ['storm', 'song', 'fire', 'blade', 'whisper']
+def  capitalize_suffix(thing):
+  return  thing.title()
+
+top_alphia = list(map(capitalize_suffix,suffixes))  
+
+random_names = [create_fantasy_name(prefixes, top_alphia) for _ in range(10)]
+
+
+def fire_in_name(name):
+    return 'Fire' in name
+      
+def concatenate_names(name1, name2):
+   return name1 + "" + name2
+
+ff = list(filter(fire_in_name,random_names))
+
+rd = reduce(concatenate_names,ff,"")
+
+def display_name_info():
+    for name in random_names:
+        print(name)
+
+    print(ff)
+    print(rd)
+   
+
+display_name_info()
+   
