@@ -1,0 +1,48 @@
+#Question1
+from functools import reduce
+playlist = [('What Was I Made For?', 3.42), ('Just Like That', 5.05), ('Song 3', 6.55), ('Leave The Door Open', 4.02), ('I Can\'t Breath', 4.47), ('Bad Guy', 3.14)]
+
+def filter_five(song):
+  if song[1]> 5:
+    return song
+fs = filter(filter_five,playlist)
+
+def translate_time(song):
+  return song[1] * 60
+
+mp = map(translate_time,playlist)
+print(list(mp))
+seconds = list(map(translate_time, playlist))
+def total_time(total,current):
+  return total + current
+
+add_durations = reduce(total_time,seconds)
+print(round(add_durations))
+
+#Question2
+from functools import  reduce
+movies = [
+  ("Spider-Man", 2.2),
+  ("Inside Out", 1.6),
+  ("Oppenheimer", 3.0),
+  ("Barbie", 1.9),
+  ("Interstellar", 2.8)
+]
+def over_two(movie):
+    if movie[1] > 2:
+        return movie
+    
+tf = filter(over_two,movies)
+
+def hour_minute(movie):
+    return movie[1] * 60
+
+mh = map(hour_minute,movies)
+
+
+def add_minuter(total,currern):
+    return total + currern
+
+rm = reduce(add_minuter,mh)
+print(round(rm))
+
