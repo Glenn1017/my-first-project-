@@ -1,0 +1,66 @@
+#从另一个文档导入
+import unittest
+from test import reverse_string
+from test import capitalize_string,is_capitalized
+
+class TeststringUtils(unittest.TestCase):
+    def test_reverse(self):
+        result = reverse_string([1,2])
+        self.assertEqual(result,[2,1])
+
+
+    def test_cap(self):
+        result1 = capitalize_string("smoke")
+        self.assertEqual(result1,"Smoke")
+
+    def test_is(self):
+        result2 = is_capitalized("hello")
+        self.assertTrue(result2)
+        
+if __name__ == "__main__":
+    unittest.main()
+#测试乘除
+import unittest
+import math
+
+def get_sqrt(n):
+  return math.sqrt(n)
+
+def divide(a, b):
+  return a / b
+
+class TeststringUtils(unittest.TestCase):
+    def test_sqrt(self):
+       with self.assertRaises(TypeError):
+          self.assertEqual('hello')
+
+
+    def test_divide(self):
+       result = divide(144,0)
+       self.assertEqual(result,0)
+if __name__ == "__main__":
+    unittest.main()
+
+
+
+#银行
+import unittest
+from test import BankAccount
+class TestBankAccount(unittest.TestCase):
+    def setUp(self):
+        self.account = BankAccount(100)
+
+
+    def tearDown(self):
+        self.bankaccount = None
+
+
+    def test_initial_balance(self):
+        self.assertEqual(self.account.balance, 100)
+
+    def test_deposit_positive_amount(self):
+        self.account.deposit(50)
+        self.assertEqual(self.account.balance, 150)
+
+if __name__ == "__main__":
+    unittest.main()
