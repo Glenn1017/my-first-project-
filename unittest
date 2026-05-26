@@ -1,0 +1,22 @@
+import unittest
+import coffee
+
+class TestCoffeeMenu(unittest.TestCase):
+    def setUp(self):
+        self.menu = coffee.CoffeeMenu()
+    
+    def test_get_price_existing_item(self):
+        result = self.menu.get_price('latte')
+        self.assertEqual(result,2.75)
+
+    def test_add_item(self):
+        
+        self.menu.add_item('mocha',3.5)
+        result1 = self.menu.get_price('mocha')
+        self.assertEqual(result1,3.5)
+        
+
+
+
+if __name__ == "__main__":
+    unittest.main()
