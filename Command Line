@@ -1,12 +1,56 @@
 echo: Hi! My name is Glenn
 Hi! My name is Glenn
+We first type echo with a piece of text, then the > greater than sign, followed by a file name we'd like to write to.
+我们首先输入 echo ，输入一段文本，然后输入 > 大于号，最后输入我们要写入的文件名。
+
+$ echo "Vintage tee, brand new phone" > cardigan.txt
+It's important to mention, however, that using the > greater than symbol will overwrite any existing content in a file. If we want to add content to a file and keep what is already there, use two greater than symbols >>:
+但需要注意的是，使用大于号 > 会覆盖文件中已有的内容。如果要向文件中添加内容并保留已有内容，请使用两个大于号 >> :
+
+$ echo "High heels on cobblestone" >> cardigan.txt
+$ cat cardigan.txt
+Vintage tee, brand new phone
+High heels on cobblestone
+
 
 Say: The Computer will say anything you input
 
 pwd: show the location 
 cat: show the information in the txt
+cat filea > fileb 去合并两个文件
+cat file1 >> file2 把file1的内容给添加到file2
 cd: go in the direction
 cd..:  back to the last one 
 cd../..: back to last and last one
 mkdir: create a file
 touch: create document
+mv : move the file 
+$ mv cardigan.txt albums/folklore/
+
+We can even use the mv command to rename existing files and directories:
+我们甚至可以使用 mv 命令来重命名现有文件和目录：
+$ mv albums discography
+
+If the second argument of mv is neither a file nor a directory, the first argument is renamed to that. This renames the albums directory to discography.
+如果 mv 的第二个参数既不是文件也不是目录，则第一个参数会被重命名为该文件或目录的名称。例如，这会将专辑目录重命名为 discography 。
+
+
+rm: remove a single file
+$ rm exile.txt
+$ rm exile.txt cardigan.txt willow.txt
+
+rmdir: r removing directories
+$ rmdir folklore/
+$ rmdir folklore/ evermore/ 1989/
+
+To remove a non-empty directory, we'll need to use the rm command with a special -r flag:
+要删除非空目录，我们需要使用带有特殊 -r 标志的 rm 命令：
+$ rm -r folklore
+
+
+cp: copy information
+cp file-a file-b
+
+We can also make a copy of a directory with the cp command!
+我们还可以使用 cp 命令复制目录！
+cp -r directory-a/ directory-b/
