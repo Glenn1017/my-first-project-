@@ -3,3 +3,10 @@ Hi! My name is Glenn
 
 Say: The Computer will say anything you input
 
+pwd: show the location 
+cat: show the information in the txt
+cd: go in the direction
+cd..:  back to the last one 
+cd../..: back to last and last one
+mkdir: create a file
+touch: create document
